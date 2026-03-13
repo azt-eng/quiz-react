@@ -30,7 +30,7 @@ import { SurvieIntro }    from './SurvieIntro/SurvieIntro.jsx'
 import { SurvieFin }      from './SurvieFin/SurvieFin.jsx'
 import { SurvieQuestion } from './SurvieQuestion/SurvieQuestion.jsx'
 
-import './ModeSurvie.css'
+
 
 // ================================================================
 // CONSTANTES — définies en dehors du composant car elles ne
