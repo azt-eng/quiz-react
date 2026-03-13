@@ -1,5 +1,9 @@
 # Wikipedia Learn – Le Moyen-Âge 🏰
 
+IMPORTANT : sur le rendu il y a le lien du premier git utilisé pour ce travail avec les branches de tous le monde je le remets plus bas au cas ou 
+
+https://github.com/DaupinDavid/codingsprint -> premier git 
+
 Quiz interactif sur le Moyen-Âge, développé en React.js.
 
 ## Stack technique
