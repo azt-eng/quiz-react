@@ -1,0 +1,103 @@
+/* ============================================
+   CoursSommaire.css — TABLE DES MATIÈRES
+   ============================================ */
+
+/* Carte du sommaire */
+.sommaire-carte {
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  height: fit-content;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Titre du sommaire */
+.sommaire-titre {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sommaire-titre svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Liste scrollable */
+.sommaire-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 24rem;
+  overflow-y: auto;
+}
+
+/* Bouton de section */
+.sommaire-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.sommaire-item:hover {
+  background-color: #f3f4f6; /* gray-100 */
+}
+
+/* Section active colorée par niveau */
+.sommaire-item--actif-debutant {
+  color: #16a34a;
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.sommaire-item--actif-intermediaire {
+  color: #2563eb;
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.sommaire-item--actif-expert {
+  color: #9333ea;
+  background-color: #faf5ff;
+  border-color: #e9d5ff;
+}
+
+/* Ligne icône + titre */
+.sommaire-item-ligne {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Cercle vide (non vu) */
+.sommaire-item-cercle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  border: 2px solid #d1d5db;
+  flex-shrink: 0;
+}
+
+/* Coche (vue) */
+.sommaire-item-vue svg {
+  width: 1rem;
+  height: 1rem;
+  color: #22c55e; /* green-500 */
+  flex-shrink: 0;
+}
+
+/* Titre de la section (tronqué) */
+.sommaire-item-titre {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

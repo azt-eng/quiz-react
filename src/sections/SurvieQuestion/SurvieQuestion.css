@@ -1,0 +1,225 @@
+/* ============================================
+   SurvieQuestion.css — CARTE QUESTION EN JEU
+   ============================================ */
+
+/* Page principale du jeu */
+.survie-jeu-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111827, #000000, #111827);
+  padding: 2rem 0;
+}
+
+.survie-jeu-contenu {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* En-tête : quitter + score + bonnes réponses */
+.survie-jeu-entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.survie-jeu-bouton-quitter {
+  padding: 0.5rem 1rem;
+  color: #9ca3af;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.survie-jeu-bouton-quitter:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.survie-jeu-score-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #431407;
+  border: 1px solid #c2410c;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+}
+
+.survie-jeu-score-badge svg { width: 1rem; height: 1rem; color: #fb923c; }
+.survie-jeu-score-badge span { font-weight: 700; color: #fdba74; }
+
+.survie-jeu-bonnes-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1f2937;
+  border: 1px solid #4b5563;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+/* Barre de progression */
+.survie-jeu-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.survie-jeu-progress-piste {
+  height: 0.5rem;
+  background-color: #374151;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.survie-jeu-progress-remplissage {
+  height: 100%;
+  background: linear-gradient(to right, #ea580c, #dc2626);
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+/* Timer et badge niveau */
+.survie-jeu-timer-carte {
+  margin-bottom: 1.5rem;
+  background-color: #111827;
+  border-radius: 0.75rem;
+  border: 1px solid;
+  padding: 1rem;
+}
+
+.survie-jeu-timer-carte--normal { border-color: #c2410c; }
+.survie-jeu-timer-carte--urgent { border-color: #ef4444; }
+
+.survie-jeu-timer-ligne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.survie-jeu-niveau-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.survie-jeu-niveau-pilule {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid;
+}
+
+.survie-jeu-niveau-pilule--debutant      { background-color: #14532d; color: #86efac; border-color: #15803d; }
+.survie-jeu-niveau-pilule--intermediaire { background-color: #1e3a8a; color: #93c5fd; border-color: #1d4ed8; }
+.survie-jeu-niveau-pilule--expert        { background-color: #4a1d96; color: #c4b5fd; border-color: #6d28d9; }
+
+.survie-jeu-timer-valeur-ligne {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.survie-jeu-timer-valeur-ligne svg { width: 1.5rem; height: 1.5rem; }
+.survie-jeu-timer-valeur           { font-size: 1.5rem; font-weight: 700; }
+
+.survie-timer--normal { color: #fdba74; }
+.survie-timer--alerte { color: #fb923c; }
+.survie-timer--urgent { color: #ef4444; }
+
+/* Barre de décompte */
+.survie-jeu-decompte-piste {
+  margin-top: 0.75rem;
+  height: 0.375rem;
+  background-color: #374151;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.survie-jeu-decompte-remplissage {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 1s linear;
+}
+
+.survie-jeu-decompte-remplissage--normal { background-color: #fb923c; }
+.survie-jeu-decompte-remplissage--alerte { background-color: #f97316; }
+.survie-jeu-decompte-remplissage--urgent { background-color: #ef4444; }
+
+/* Carte de la question */
+.survie-question-carte {
+  margin-bottom: 1.5rem;
+  background-color: #111827;
+  border: 2px solid #c2410c;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.survie-question-corps { padding: 1.5rem; }
+.survie-question-texte { font-size: 1.25rem; font-weight: 700; color: white; margin-bottom: 1.5rem; }
+
+.survie-question-liste { display: flex; flex-direction: column; gap: 0.75rem; }
+
+/* Bouton de réponse */
+.survie-reponse-bouton {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  border: 2px solid;
+}
+
+.survie-reponse-bouton:disabled { cursor: not-allowed; }
+
+.survie-reponse--neutre {
+  border-color: #4b5563;
+  background-color: #1f2937;
+  color: white;
+}
+
+.survie-reponse--neutre:hover {
+  border-color: #f97316;
+  background-color: #431407;
+}
+
+.survie-reponse--correct  { border-color: #22c55e; background-color: #14532d; color: #bbf7d0; }
+.survie-reponse--incorrect{ border-color: #ef4444; background-color: #7f1d1d; color: #fecaca; }
+.survie-reponse--grise    { border-color: #374151; background-color: #1f2937; color: #6b7280; opacity: 0.5; }
+
+.survie-reponse-ligne { display: flex; align-items: center; gap: 0.75rem; }
+
+.survie-reponse-lettre {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.survie-reponse-icone { margin-left: auto; width: 1.25rem; height: 1.25rem; }
+.survie-reponse-icone--correct   { color: #4ade80; }
+.survie-reponse-icone--incorrect { color: #f87171; }
+
+/* Message "Préparez-vous" pendant animation */
+.survie-jeu-message-attente {
+  text-align: center;
+  color: #fb923c;
+  font-size: 0.875rem;
+  animation: pulse 1s infinite;
+}

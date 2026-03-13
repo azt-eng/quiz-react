@@ -1,0 +1,96 @@
+/* ============================================
+   CarteExamen.css — CARTE EXAMEN FINAL
+   ============================================ */
+
+/* Carte principale */
+.examen-carte {
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* État débloqué */
+.examen-carte--debloque {
+  border-color: #fbbf24;                               /* amber-400 */
+  background: linear-gradient(to right, #fffbeb, #fff7ed);
+}
+
+/* État verrouillé */
+.examen-carte--verrouille {
+  border-color: #e5e7eb;                               /* gray-200 */
+  background-color: #f9fafb;                           /* gray-50  */
+}
+
+/* Titre */
+.examen-titre {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+
+.examen-titre svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Description */
+.examen-description {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+/* Infos (séries + questions) */
+.examen-infos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.examen-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.examen-info-item svg {
+  width: 1rem;
+  height: 1rem;
+  color: #6b7280;
+}
+
+.examen-info-item span {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* Bouton commencer */
+.examen-bouton {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: white;
+  font-size: 1.125rem;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+
+.examen-bouton--actif {
+  background: linear-gradient(to right, #d97706, #ea580c);
+  cursor: pointer;
+}
+
+.examen-bouton--actif:hover {
+  opacity: 0.9;
+}
+
+.examen-bouton--inactif {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}

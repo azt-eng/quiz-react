@@ -1,0 +1,150 @@
+/* ============================================
+   ExamenResultats.css — ÉCRAN RÉSULTATS EXAMEN
+   ============================================ */
+
+.examen-resultats-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fffbeb, #fff7ed, #fefce8);
+  padding: 2rem 0;
+}
+
+.examen-resultats-contenu {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.examen-resultats-carte {
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid #fbbf24;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Badge */
+.examen-resultats-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(to right, #fbbf24, #facc15);
+  color: #713f12;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  animation: bounce 1s infinite;
+}
+
+.examen-resultats-badge-pill svg { width: 1.25rem; height: 1.25rem; }
+
+/* Icône */
+.examen-resultats-icone-cercle {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.examen-resultats-icone-cercle--succes {
+  background: linear-gradient(135deg, #fef3c7, #fefce8);
+}
+.examen-resultats-icone-cercle--echec { background-color: #fee2e2; }
+
+.examen-resultats-icone-cercle--succes svg { color: #d97706; width: 3.5rem; height: 3.5rem; }
+.examen-resultats-icone-cercle--echec  svg { color: #dc2626; width: 3.5rem; height: 3.5rem; }
+
+.examen-resultats-titre {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #78350f;
+  margin-bottom: 0.5rem;
+}
+
+.examen-resultats-sous-titre {
+  color: #4b5563;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Grilles de stats */
+.examen-resultats-stats-series {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.examen-resultats-stat-serie {
+  background-color: #fffbeb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.examen-resultats-stat-serie-valeur {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d97706;
+}
+
+.examen-resultats-stat-serie-label {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.examen-resultats-stats-global {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.examen-resultats-stat { padding: 1rem; border-radius: 0.5rem; }
+.examen-resultats-stat--green  { background-color: #f0fdf4; }
+.examen-resultats-stat--blue   { background-color: #eff6ff; }
+.examen-resultats-stat--purple { background-color: #faf5ff; }
+
+.examen-resultats-stat-valeur { font-size: 1.875rem; font-weight: 700; }
+.examen-resultats-stat--green  .examen-resultats-stat-valeur { color: #16a34a; }
+.examen-resultats-stat--blue   .examen-resultats-stat-valeur { color: #2563eb; }
+.examen-resultats-stat--purple .examen-resultats-stat-valeur { color: #9333ea; }
+
+.examen-resultats-stat-label { font-size: 0.875rem; color: #4b5563; }
+
+/* Certificat */
+.examen-certificat {
+  background: linear-gradient(to right, #fef3c7, #fefce8);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.examen-certificat svg { width: 3rem; height: 3rem; color: #d97706; margin: 0 auto 0.75rem; }
+.examen-certificat-titre { font-size: 1.25rem; font-weight: 700; color: #78350f; margin-bottom: 0.5rem; }
+.examen-certificat-texte { color: #92400e; }
+
+/* Bouton retour */
+.examen-resultats-bouton {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #d97706, #ea580c);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.examen-resultats-bouton:hover { opacity: 0.9; }
+.examen-resultats-bouton svg { width: 1.25rem; height: 1.25rem; }

@@ -1,0 +1,179 @@
+/* ================================================================
+   GrilleNiveaux.css — GRILLE DES 3 NIVEAUX
+   ================================================================
+
+   🔑 CONCEPT CSS : CSS GRID
+   CSS Grid est un système de grille 2D (lignes + colonnes).
+   Contrairement à Flexbox (1D), Grid gère lignes ET colonnes.
+   
+   Propriétés clés :
+     display: grid                → active CSS Grid
+     grid-template-columns: ...   → définit les colonnes
+     repeat(3, 1fr)               → 3 colonnes de taille égale
+       → "1fr" = 1 fraction de l'espace disponible
+       → 3 colonnes = chacune prend 1/3 de la largeur
+     gap: 1.5rem                  → espace entre les cellules
+   
+   🔑 CONCEPT CSS : @media (RESPONSIVE DESIGN)
+   @media (max-width: 768px) { ... } s'applique uniquement si
+   la largeur de l'écran est ≤ 768px (mobiles, tablettes).
+   C'est le principe du "mobile-first" ou "desktop-first" selon
+   l'ordre des déclarations.
+
+   🔑 CONCEPT CSS : POSITION RELATIVE + ABSOLUTE
+   Un enfant "position: absolute" se positionne par rapport au
+   premier parent qui a "position: relative" ou "absolute".
+   Ici la carte a "position: relative", donc le badge de statut
+   (position: absolute; top: 0; right: 0) se place dans le coin
+   supérieur droit DE LA CARTE, pas de la page.
+
+   🔑 CONCEPT CSS : TRANSITION
+   transition: transform 0.3s ease → anime les changements de
+   la propriété "transform" sur 0.3 secondes avec un effet "ease"
+   (accélération progressive). Utilisé pour le hover de la carte.
+   ================================================================ */
+
+/* Grille de 3 colonnes égales */
+.grille-niveaux {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* repeat(3, 1fr) = 3 colonnes qui se partagent l'espace également */
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Sur mobile : 1 seule colonne (les cartes s'empilent) */
+@media (max-width: 768px) {
+  .grille-niveaux {
+    grid-template-columns: 1fr;
+    /* 1fr = 1 seule colonne de toute la largeur */
+  }
+}
+
+/* Carte d'un niveau */
+.niveau-carte {
+  position: relative;
+  /* Nécessaire pour que les enfants "absolute" se positionnent ici */
+  overflow: hidden;
+  /* Cache les éléments qui dépassent les bords arrondis */
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  /* Anime ces 3 propriétés quand elles changent (ex: au hover) */
+}
+
+/* Carte accessible (niveau débloqué) → effets de survol activés */
+.niveau-carte--accessible {
+  cursor: pointer;
+  /* cursor: pointer = le curseur devient une main au survol */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.niveau-carte--accessible:hover {
+  /* :hover = styles appliqués quand la souris est sur l'élément */
+  transform: scale(1.05);
+  /* scale(1.05) = agrandit la carte de 5% au survol */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  /* Ombre plus prononcée pour effet de relief */
+}
+
+/* Carte verrouillée */
+.niveau-carte--bloque {
+  opacity: 0.7;
+  /* opacity: 0 = invisible, 1 = normal. 0.7 = légèrement transparent */
+  cursor: default;
+}
+
+/* Badge de statut — positionné dans le coin supérieur droit */
+.niveau-statut {
+  position: absolute;
+  /* Se positionne par rapport à .niveau-carte (position: relative) */
+  top: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+/* Le badge lui-même */
+.niveau-statut-badge {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+/* Couleurs selon le statut */
+.niveau-statut-badge--complete  { background-color: #22c55e; }  /* vert   */
+.niveau-statut-badge--en-cours  { background-color: #eab308; }  /* jaune  */
+.niveau-statut-badge--disponible{ background-color: #3b82f6; }  /* bleu   */
+.niveau-statut-badge--verrouille{ background-color: #9ca3af; }  /* gris   */
+
+/* Contenu de la carte */
+.niveau-contenu {
+  padding: 1.5rem;
+}
+
+.niveau-icone {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.niveau-nom {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  /* La couleur est appliquée via style inline dans le JSX
+     car elle varie selon le niveau (vert, bleu, violet) */
+}
+
+.niveau-description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Ligne d'informations (questions / temps) */
+.niveau-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* space-between = un élément à gauche, un à droite */
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Mini barre de progression */
+.niveau-progression-piste {
+  margin-top: 0.75rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Blanc semi-transparent pour s'adapter à la couleur de fond */
+  border-radius: 9999px;
+  height: 0.5rem;
+}
+
+.niveau-progression-remplissage {
+  background-color: #f59e0b; /* amber-500 */
+  height: 0.5rem;
+  border-radius: 9999px;
+  /* La largeur (width) est définie en inline style dans le JSX */
+}
+
+/* Overlay cadenas (par-dessus la carte, couvre tout) */
+.niveau-overlay {
+  position: absolute;
+  inset: 0;
+  /* inset: 0 = top:0, right:0, bottom:0, left:0 = couvre tout */
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.niveau-overlay-texte {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}

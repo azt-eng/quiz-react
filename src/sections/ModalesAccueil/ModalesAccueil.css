@@ -1,0 +1,133 @@
+/* ============================================
+   ModalesAccueil.css — FENÊTRES MODALES
+   ============================================ */
+
+/* Fond semi-transparent de la modale */
+.modale-fond {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+/* Fenêtre de la modale */
+.modale-fenetre {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin: 0 1rem;
+  padding: 1.5rem;
+}
+
+/* Modale réinitialisation */
+.modale-fenetre--reinit {
+  max-width: 28rem;
+}
+
+/* Modale badge */
+.modale-fenetre--badge {
+  max-width: 24rem;
+}
+
+/* Titre de la modale réinitialisation */
+.modale-reinit-titre {
+  color: #dc2626;                  /* red-600 */
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Texte d'avertissement */
+.modale-reinit-texte {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+/* Groupe de boutons côte à côte */
+.modale-boutons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Bouton annuler */
+.modale-bouton-annuler {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modale-bouton-annuler:hover {
+  background-color: #f9fafb;
+}
+
+/* Bouton confirmer (destructif) */
+.modale-bouton-confirmer {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.modale-bouton-confirmer:hover {
+  background-color: #b91c1c;
+}
+
+/* Centre du détail de badge */
+.modale-badge-centre {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Icône du badge (grande) */
+.modale-badge-icone {
+  font-size: 3rem;
+}
+
+/* Nom du badge */
+.modale-badge-nom {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Description du badge */
+.modale-badge-description {
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* Date de débloquage */
+.modale-badge-date {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* Bouton fermer */
+.modale-bouton-fermer {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modale-bouton-fermer:hover {
+  background-color: #f9fafb;
+}

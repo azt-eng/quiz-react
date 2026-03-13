@@ -1,0 +1,46 @@
+/* ============================================
+   Accueil.css — STYLES DU WRAPPER DE LA PAGE D'ACCUEIL
+   ============================================ */
+
+/* Fond global de la page d'accueil */
+.accueil-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fffbeb, #fff7ed, #fefce8);
+}
+
+/* Contenu principal centré */
+.accueil-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Zone du bouton réinitialiser */
+.accueil-reinit-zone {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Bouton réinitialiser */
+.accueil-reinit-bouton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;   /* gray-300 */
+  border-radius: 0.5rem;
+  color: #6b7280;               /* gray-500 */
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.accueil-reinit-bouton:hover {
+  color: #dc2626;               /* red-600 */
+}
+
+/* Icône dans le bouton réinitialiser */
+.accueil-reinit-icone {
+  width: 1rem;
+  height: 1rem;
+}

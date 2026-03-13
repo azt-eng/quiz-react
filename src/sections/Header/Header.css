@@ -1,0 +1,115 @@
+/* ================================================================
+   Header.css — STYLES DE L'EN-TÊTE
+   ================================================================
+
+   🔑 CONCEPT CSS : FLEXBOX
+   Flexbox est un système de mise en page qui aligne les éléments
+   en ligne (flex-direction: row) ou en colonne (flex-direction: column).
+   Les propriétés clés :
+     - display: flex         → active le mode flexbox
+     - align-items: center   → aligne verticalement au centre
+     - justify-content: ...  → distribue l'espace horizontalement
+     - gap: 0.5rem           → espace entre les éléments enfants
+
+   🔑 CONCEPT CSS : UNITÉS REM
+   "rem" = "root em". 1rem = taille de la police de base (souvent 16px).
+   → 0.5rem = 8px, 1rem = 16px, 1.5rem = 24px, etc.
+   C'est préférable aux pixels car ça s'adapte aux préférences utilisateur.
+
+   🔑 CONCEPT CSS : RGBA / HSL
+   rgba(0, 0, 0, 0.5) = noir avec 50% d'opacité (canal alpha = 0.5)
+   rgba(255,255,255,0.2) = blanc très transparent (20% d'opacité)
+   ================================================================ */
+
+/* La barre de fond de l'en-tête */
+.header-barre {
+  /* Dégradé de gauche à droite : marron foncé → orange → marron foncé */
+  background: linear-gradient(to right, #92400e, #c2410c, #92400e);
+  color: white;
+  /* La propriété "color" s'applique aussi au texte des éléments enfants */
+  padding: 1.5rem 0;
+  /* padding: haut/bas gauche/droite */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* box-shadow: décalageX décalageY flou couleur */
+}
+
+/* Conteneur interne : définit la largeur max et centre le contenu */
+.header-contenu {
+  max-width: 1200px;
+  /* La largeur maximale de la zone de contenu */
+  margin: 0 auto;
+  /* "auto" sur les marges gauche/droite = centrage horizontal */
+  padding: 0 1rem;
+  /* 0 = haut/bas, 1rem = gauche/droite */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* space-between = un élément à gauche, un à droite */
+}
+
+/* Groupe logo + titres */
+.header-logo-groupe {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Fond arrondi de l'icône */
+.header-logo-icone {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Blanc semi-transparent pour l'effet "verre" */
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  /* border-radius: arrondi les coins. 9999px = forme circulaire complète */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo-icone svg {
+  /* svg = la balise générée par les icônes lucide-react */
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Titre principal */
+.header-titre {
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* 700 = gras, 400 = normal, 300 = léger */
+  margin: 0;
+  /* Par défaut, h1 a une marge. On la supprime ici. */
+}
+
+/* Sous-titre (sous le titre principal) */
+.header-sous-titre {
+  color: #fde68a;  /* Jaune doux (amber-100 dans Tailwind) */
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Groupe des 2 badges statistiques */
+.header-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Un badge (cercule avec étoile/trophée + texte) */
+.header-stat-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  /* padding: haut/bas=0.5rem gauche/droite=1rem */
+  border-radius: 9999px;
+  /* 9999px = capsule arrondie */
+  font-weight: 700;
+}
+
+.header-stat-badge svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #fde047;  /* Jaune vif pour les icônes */
+}

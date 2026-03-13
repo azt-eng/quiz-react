@@ -1,0 +1,99 @@
+/* ============================================
+   CoursContenu.css — CONTENU D'UNE SECTION
+   ============================================ */
+
+/* Carte du contenu */
+.contenu-carte {
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.contenu-corps {
+  padding: 1.5rem;
+}
+
+/* Compteur de section */
+.contenu-compteur {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+/* Titre de la section */
+.contenu-titre {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+/* Paragraphes du cours */
+.contenu-paragraphe {
+  margin-bottom: 1rem;
+  color: #374151;
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+/* Barre de navigation bas de page */
+.contenu-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 1.5rem;
+}
+
+/* Bouton précédent / suivant */
+.contenu-bouton-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contenu-bouton-nav:hover {
+  background-color: #f9fafb;
+}
+
+.contenu-bouton-nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.contenu-bouton-nav svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Bouton "Commencer le quiz" */
+.contenu-bouton-quiz {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(to right, #d97706, #ea580c);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.contenu-bouton-quiz:hover {
+  opacity: 0.9;
+}
+
+.contenu-bouton-quiz svg {
+  width: 1rem;
+  height: 1rem;
+}

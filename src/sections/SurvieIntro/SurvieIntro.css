@@ -1,0 +1,96 @@
+/* ============================================
+   SurvieIntro.css — ÉCRAN D'INTRODUCTION MODE SURVIE
+   ============================================ */
+
+.survie-intro-fond {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.survie-intro-carte {
+  background: linear-gradient(135deg, #111827, #000000);
+  border: 2px solid #f97316;
+  border-radius: 1rem;
+  max-width: 32rem;
+  width: 100%;
+  padding: 2rem;
+  color: white;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.survie-intro-entete {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.survie-intro-emoji { font-size: 3.75rem; display: block; margin-bottom: 1rem; }
+.survie-intro-titre { font-size: 1.875rem; font-weight: 700; color: #fb923c; margin-bottom: 0.5rem; }
+.survie-intro-sous-titre { color: #fed7aa; font-size: 0.875rem; }
+
+/* Bloc de règles */
+.survie-intro-regles {
+  background-color: rgba(124, 45, 18, 0.3);
+  border: 1px solid #c2410c;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.survie-intro-regle {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.survie-intro-regle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.survie-intro-regle-texte { font-size: 0.875rem; color: #e5e7eb; }
+.survie-intro-regle-texte strong { color: #fdba74; }
+
+/* Boutons */
+.survie-intro-boutons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.survie-intro-bouton-retour {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #4b5563;
+  color: #d1d5db;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.survie-intro-bouton-retour:hover { background-color: #1f2937; }
+
+.survie-intro-bouton-jouer {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(to right, #ea580c, #dc2626);
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.survie-intro-bouton-jouer:hover { opacity: 0.9; }

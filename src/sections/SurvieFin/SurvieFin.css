@@ -1,0 +1,144 @@
+/* ============================================
+   SurvieFin.css — ÉCRAN DE FIN MODE SURVIE
+   ============================================ */
+
+.survie-fin-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111827, #000000, #111827);
+  padding: 2rem 0;
+}
+
+.survie-fin-contenu {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Carte résultat */
+.survie-fin-carte {
+  margin-bottom: 1.5rem;
+  background-color: #111827;
+  border: 2px solid #ea580c;
+  border-radius: 0.75rem;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.survie-fin-emoji { font-size: 4.5rem; display: block; margin-bottom: 1rem; }
+
+.survie-fin-titre { font-size: 1.875rem; font-weight: 700; color: #fb923c; margin-bottom: 0.25rem; }
+.survie-fin-sous-titre { color: #9ca3af; margin-bottom: 1.5rem; }
+
+/* Stats */
+.survie-fin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.survie-fin-stat {
+  background-color: #431407;
+  border: 1px solid #c2410c;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.survie-fin-stat-valeur { font-size: 1.875rem; font-weight: 700; }
+.survie-fin-stat-valeur--score  { color: #fb923c; }
+.survie-fin-stat-valeur--bonnes { color: #facc15; }
+.survie-fin-stat-valeur--rang   { color: #f87171; }
+.survie-fin-stat-label { font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem; }
+
+/* Cooldown */
+.survie-fin-cooldown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: #1f2937;
+  border: 1px solid #4b5563;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.survie-fin-cooldown svg { width: 1.25rem; height: 1.25rem; color: #9ca3af; }
+.survie-fin-cooldown-label { font-size: 0.875rem; color: #9ca3af; }
+.survie-fin-cooldown-valeur { font-size: 1.25rem; font-family: monospace; font-weight: 700; color: #fb923c; }
+
+/* Boutons */
+.survie-fin-bouton-rejouer {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #ea580c, #dc2626);
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  margin-bottom: 0.75rem;
+}
+
+.survie-fin-bouton-rejouer:hover { opacity: 0.9; }
+
+.survie-fin-bouton-retour {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #4b5563;
+  color: #d1d5db;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.survie-fin-bouton-retour:hover { background-color: #1f2937; }
+
+/* Classement */
+.survie-classement-carte {
+  background-color: #111827;
+  border: 2px solid #ea580c;
+  border-radius: 0.75rem;
+  color: white;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.survie-classement-titre {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #fb923c;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.survie-classement-titre svg { width: 1.25rem; height: 1.25rem; }
+
+.survie-classement-vide { color: #6b7280; text-align: center; padding: 1rem 0; }
+
+.survie-classement-liste { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.survie-classement-ligne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.survie-classement-ligne--joueur { background-color: #ea580c; border: 1px solid #fb923c; }
+.survie-classement-ligne--autre  { background-color: #1f2937; border: 1px solid #374151; }
+
+.survie-classement-gauche { display: flex; align-items: center; gap: 0.75rem; }
+.survie-classement-medaille { font-size: 1.125rem; font-weight: 700; width: 2rem; text-align: center; }
+.survie-classement-nom { font-weight: 500; font-size: 0.875rem; }
+.survie-classement-nom-badge { font-size: 0.75rem; background-color: rgba(255,255,255,0.2); padding: 0.125rem 0.5rem; border-radius: 9999px; margin-left: 0.5rem; }
+.survie-classement-detail { font-size: 0.75rem; color: #9ca3af; }
+.survie-classement-score { font-weight: 700; color: #fdba74; }

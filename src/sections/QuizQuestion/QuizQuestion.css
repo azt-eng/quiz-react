@@ -1,0 +1,130 @@
+/* ================================================================
+   QuizQuestion.css — CARTE QUESTION + RÉPONSES
+   ================================================================
+
+   🔑 CONCEPT CSS : BEM (Block Element Modifier)
+   C'est une convention de nommage CSS :
+   - Block   = composant de base          → .quiz-reponse-bouton
+   - Modifier = variante du composant     → .quiz-reponse--neutre
+   Les doubles tirets -- séparent le modifier.
+   Avantage : on évite les conflits de noms entre composants.
+
+   🔑 CONCEPT CSS : :disabled (pseudo-classe)
+   button:disabled {...} s'applique quand l'attribut HTML
+   "disabled" est présent sur le bouton.
+   Ici on change le curseur pour montrer que le bouton est inactif.
+
+   🔑 CONCEPT CSS : FLEXBOX AVEC ml-auto
+   Pour pousser un élément tout à droite dans un conteneur flex,
+   on utilise "margin-left: auto".
+   auto = prend tout l'espace disponible à gauche → pousse à droite.
+   ================================================================ */
+
+/* Carte principale de la question */
+.quiz-question-carte {
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+}
+
+/* Texte de la question */
+.quiz-question-texte {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Conteneur des 4 boutons de réponse */
+.quiz-question-liste {
+  display: flex;
+  flex-direction: column;  /* Les boutons s'empilent verticalement */
+  gap: 0.75rem;
+}
+
+/* Bouton de réponse — base commune à toutes les variantes */
+.quiz-reponse-bouton {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  /* Anime le changement de fond et de bordure (ex: au hover) */
+  border: 2px solid;
+  /* L'épaisseur est fixée ici. La couleur dépend du modificateur. */
+  background-color: white;
+}
+
+/* Désactivé → curseur normal (pas de main) */
+.quiz-reponse-bouton:disabled {
+  cursor: not-allowed;
+  /* not-allowed = curseur interdit (cercle barré) */
+}
+
+/* ---- MODIFICATEURS D'ÉTAT ---- */
+
+/* Pas encore répondu */
+.quiz-reponse--neutre {
+  border-color: #e5e7eb;
+  background-color: white;
+}
+
+.quiz-reponse--neutre:hover {
+  background-color: #fffbeb; /* Fond jaune pâle */
+  border-color: #fcd34d;     /* Bordure dorée */
+}
+
+/* Bonne réponse */
+.quiz-reponse--correct {
+  background-color: #dcfce7; /* Fond vert pâle */
+  border-color: #22c55e;     /* Bordure verte franche */
+}
+
+/* Mauvaise réponse choisie */
+.quiz-reponse--incorrect {
+  background-color: #fee2e2; /* Fond rouge pâle */
+  border-color: #ef4444;     /* Bordure rouge franche */
+}
+
+/* Option non choisie (après révélation) */
+.quiz-reponse--grise {
+  background-color: #f9fafb;
+  border-color: #e5e7eb;
+  opacity: 0.5;  /* Semi-transparent pour montrer que ce n'est pas important */
+}
+
+/* Ligne intérieure du bouton : lettre + texte + icône */
+.quiz-reponse-ligne {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Badge lettre A/B/C/D */
+.quiz-reponse-lettre {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;      /* Forme circulaire */
+  background-color: #e5e7eb;  /* Fond gris clair */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+  /* flex-shrink: 0 empêche le cercle de se rétrécir si le texte est long */
+}
+
+/* Icône résultat (coche ou croix) — poussée à droite par margin-left auto */
+.quiz-reponse-icone {
+  margin-left: auto;
+  /* auto = prend tout l'espace disponible à gauche → pousse l'icône à droite */
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.quiz-reponse-icone--correct   { color: #22c55e; }  /* vert  */
+.quiz-reponse-icone--incorrect { color: #ef4444; }  /* rouge */

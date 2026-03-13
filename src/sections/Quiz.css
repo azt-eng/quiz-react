@@ -1,0 +1,77 @@
+/* ============================================
+   Quiz.css — LAYOUT DE LA PAGE DE QUIZ
+   ============================================ */
+
+.quiz-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fffbeb, #fff7ed, #fefce8);
+  padding: 2rem 0;
+}
+
+.quiz-contenu {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* En-tête de jeu */
+.quiz-entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-bouton-quitter {
+  padding: 0.5rem 1rem;
+  color: #4b5563;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quiz-bouton-quitter:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.quiz-entete-niveau {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.quiz-entete-icone {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #f59e0b;
+}
+
+.quiz-entete-espace { width: 5rem; }
+
+/* Barre de progression */
+.quiz-progression { margin-bottom: 1.5rem; }
+
+.quiz-progression-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-progression-piste {
+  width: 100%;
+  background-color: #fde68a;
+  border-radius: 9999px;
+  height: 0.5rem;
+}
+
+.quiz-progression-remplissage {
+  background-color: #f59e0b;
+  height: 0.5rem;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}

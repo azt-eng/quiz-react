@@ -1,0 +1,61 @@
+/* ============================================
+   CoursTermine.css — BANNER DE FIN DE COURS
+   ============================================ */
+
+/* Carte verte de félicitations */
+.cours-termine-carte {
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #4ade80;       /* green-400 */
+  background: linear-gradient(to right, #f0fdf4, #ecfdf5);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Grande icône de coche */
+.cours-termine-icone {
+  width: 3rem;
+  height: 3rem;
+  color: #22c55e;                  /* green-500 */
+  margin: 0 auto 1rem;
+}
+
+/* Titre */
+.cours-termine-titre {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #14532d;                  /* green-800 */
+  margin-bottom: 0.5rem;
+}
+
+/* Sous-texte */
+.cours-termine-texte {
+  color: #15803d;                  /* green-700 */
+  margin-bottom: 1rem;
+}
+
+/* Bouton commencer le quiz */
+.cours-termine-bouton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(to right, #16a34a, #059669);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.cours-termine-bouton:hover {
+  opacity: 0.9;
+}
+
+.cours-termine-bouton svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}

@@ -1,0 +1,40 @@
+/* ============================================
+   QuizTimer.css — AFFICHAGE DU TIMER
+   ============================================ */
+
+.quiz-timer-carte {
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.3s ease;
+}
+
+.quiz-timer-carte--urgent {
+  border-color: #f87171; /* red-400 */
+}
+
+.quiz-timer-centre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.quiz-timer-icone {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.quiz-timer-icone--normal  { color: #d97706; } /* amber-600 */
+.quiz-timer-icone--urgent  { color: #ef4444; } /* red-500   */
+
+.quiz-timer-valeur {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.quiz-timer-valeur--normal { color: #78350f; } /* amber-900 */
+.quiz-timer-valeur--urgent { color: #ef4444; } /* red-500   */

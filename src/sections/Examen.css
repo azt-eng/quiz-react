@@ -1,0 +1,69 @@
+/* ============================================
+   Examen.css — LAYOUT DE LA PAGE D'EXAMEN
+   ============================================ */
+
+.examen-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fffbeb, #fff7ed, #fefce8);
+  padding: 2rem 0;
+}
+
+.examen-contenu {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* En-tête */
+.examen-entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.examen-bouton-quitter {
+  padding: 0.5rem 1rem;
+  color: #4b5563;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.examen-bouton-quitter:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.examen-entete-titre {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.examen-entete-espace { width: 5rem; }
+
+/* Barre de progression */
+.examen-progression { margin-bottom: 1.5rem; }
+
+.examen-progression-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.examen-progression-piste {
+  width: 100%;
+  background-color: #fde68a;
+  border-radius: 9999px;
+  height: 0.5rem;
+}
+
+.examen-progression-remplissage {
+  background-color: #f59e0b;
+  height: 0.5rem;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
